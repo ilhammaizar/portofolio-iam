@@ -66,7 +66,7 @@ export default function Home() {
             />
             <span>{profile.name}</span>
           </a>
-          <span>© 2026 · Dibuat dengan rasa ingin tahu.</span>
+          <span>© 2026 · IAM-Ilham Aulia Maizar.</span>
           <a className="footer-credit" href="#beranda">Kembali ke atas ↑</a>
         </footer>
       </div>
