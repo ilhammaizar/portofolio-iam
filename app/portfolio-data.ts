@@ -3,11 +3,10 @@ import {
   BriefcaseBusiness,
   Camera,
   Code2,
-  Database,
   GitBranch,
-  MousePointer2,
+  Laptop,
   Network,
-  ShieldCheck,
+  Wrench,
 } from "lucide-react";
 
 // Identitas utama situs yang dipakai ulang oleh hero, navigasi, kontak, dan footer.
@@ -21,53 +20,101 @@ export const profile = {
   cvUrl: "/CV-%20Ilham%20Aulia%20Maizar.pdf",
   profileImageUrl: "/Foto-Ilham.jpg",
   description:
-    "Lulusan S1 Teknik Informatika Universitas Nasional dengan IPK 3.74, berfokus pada pengembangan perangkat lunak, jaringan komputer, dan administrasi sistem.",
+    "Lulusan S1 Teknik Informatika dari Universitas Nasional dengan IPK 3.74 yang memiliki keahlian dalam Pengembangan Perangkat Lunak, Network Engineering, dan Administrasi Sistem. Berpengalaman teknis dalam mengelola infrastruktur jaringan lokal serta penanganan troubleshooting hardware/software saat magang sebagai Network Engineer di kantor kelurahan. Memiliki latar belakang pelayanan pelanggan dan pengelolaan transaksi pembayaran di PT Pos Indonesia dengan tingkat akurasi yang tinggi. Membangun aplikasi web interaktif, berorientasi pada detail, dan siap memberikan kontribusi profesional di industri IT.",
   roles: ["Software Developer", "Network Engineer", "System Administrator"],
 };
 
-// Konten kartu proyek: nomor, kategori, deskripsi, teknologi, dan tautan.
-// Ganti data contoh ini dengan proyek milik Anda.
-export const projects = [
+export const education = {
+  institution: "Universitas Nasional",
+  degree: "S1 Teknik Informatika",
+  status: "Lulus",
+  gpa: "3.74 / 4.00",
+};
+
+export const experience = [
   {
-    number: "01",
-    title: "Lumina Finance",
-    category: "Dashboard keuangan",
-    description:
-      "Dashboard finansial yang membantu pengguna memahami arus kas lewat visualisasi data yang jernih.",
-    stack: ["Next.js", "TypeScript", "Tailwind"],
-    githubUrl: "https://github.com/ilhammaizar",
-    demoUrl: "https://example.com/",
+    organization: "Kantor Kelurahan",
+    role: "Network Engineer (Magang)",
+    highlights: [
+      "Mengonfigurasi, memelihara, dan memantau stabilitas jaringan lokal (LAN/WLAN) untuk mendukung kelancaran pelayanan publik.",
+      "Melakukan pemeliharaan dan troubleshooting rutin perangkat keras (PC/Printer), instalasi sistem operasi, serta perangkat lunak pendukung kerja pegawai.",
+      "Mengelola pengabelan jaringan, termasuk crimping kabel UTP, patching, dan pengujian koneksi internet.",
+      "Membantu dokumentasi inventarisasi aset TI serta pemetaan topologi jaringan internal kelurahan.",
+    ],
   },
   {
-    number: "02",
-    title: "Forma Studio",
-    category: "Website kreatif",
-    description:
-      "Pengalaman web editorial untuk studio kreatif dengan interaksi lembut dan tipografi ekspresif.",
-    stack: ["React", "Framer Motion", "CSS"],
-    githubUrl: "https://github.com/ilhammaizar  ",
-    demoUrl: "https://example.com/",
-  },
-  {
-    number: "03",
-    title: "Orbit Notes",
-    category: "Produktivitas",
-    description:
-      "Ruang kerja digital yang sederhana untuk menyimpan ide, menghubungkan catatan, dan fokus berkarya.",
-    stack: ["Next.js", "Supabase", "UI Design"],
-    githubUrl: "https://github.com/ilhammaizar",
-    demoUrl: "https://example.com/",
+    organization: "PT Pos Indonesia",
+    role: "Pelayanan Pembayaran / Customer Service",
+    highlights: [
+      "Melayani transaksi pembayaran tagihan harian (PLN, PDAM, BPJS, multifinance, dan lainnya) serta pengiriman uang pelanggan secara akurat.",
+      "Mengoperasikan sistem transaksi internal perusahaan serta menyusun rekapitulasi laporan kas dan keuangan harian.",
+      "Memberikan pelayanan prima dan menangani keluhan serta pertanyaan pelanggan dengan ramah dan solutif.",
+    ],
   },
 ];
 
-// Mata kuliah relevan dan ikon yang ditampilkan pada bagian Tentang.
+// Konten proyek akademik yang ditampilkan pada bagian Proyek.
+export const projects = [
+  {
+    number: "01",
+    title: "Pengembangan Website Toko Online Sederhana",
+    category: "Proyek akademik",
+    description:
+      "Membangun aplikasi web toko online dari tahap perancangan hingga implementasi, dengan basis data untuk mengelola katalog produk, keranjang belanja, dan formulir pemesanan.",
+    stack: ["HTML", "CSS", "PHP", "JavaScript", "MySQL"],
+    highlights: [
+      "Mengembangkan aplikasi web toko online dari tahap perancangan hingga implementasi.",
+      "Mengintegrasikan MySQL untuk katalog produk, shopping cart, dan formulir pemesanan.",
+    ],
+  },
+];
+
+// Keterampilan dikelompokkan sesuai kategori pada ringkasan profil.
 export const skills = [
-  { name: "Pemrograman Web", icon: Code2 },
-  { name: "Rekayasa Perangkat Lunak", icon: Blocks },
-  { name: "Jaringan Komputer", icon: Network },
-  { name: "Basis Data", icon: Database },
-  { name: "Keamanan Sistem", icon: ShieldCheck },
-  { name: "Interaksi Manusia dan Komputer", icon: MousePointer2 },
+  {
+    category: "Mata Kuliah Relevan",
+    icon: Blocks,
+    items: [
+      "Pemrograman Web",
+      "Rekayasa Perangkat Lunak",
+      "Jaringan Komputer",
+      "Basis Data",
+      "Keamanan Sistem",
+      "Interaksi Manusia dan Komputer",
+    ],
+  },
+  {
+    category: "Bahasa Pemrograman & Web",
+    icon: Code2,
+    items: ["PHP", "JavaScript", "HTML", "CSS", "SQL"],
+  },
+  {
+    category: "Networking & IT Support",
+    icon: Network,
+    items: [
+      "Konfigurasi LAN/WLAN",
+      "Subnetting",
+      "Crimping Kabel",
+      "Troubleshooting Hardware/Software",
+      "Windows OS Support",
+    ],
+  },
+  {
+    category: "Tools & Software",
+    icon: Wrench,
+    items: ["GitHub", "VS Code", "MySQL", "Microsoft Office (Word)"],
+  },
+  {
+    category: "Soft Skills",
+    icon: Laptop,
+    items: [
+      "Problem Solving",
+      "Customer Service",
+      "Ketelitian Transaksi",
+      "Kerja Sama Tim",
+      "Komunikasi Efektif",
+    ],
+  },
 ];
 
 // Akun sosial dipakai pada ikon di hero dan daftar tautan di bagian Kontak.

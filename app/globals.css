@@ -655,7 +655,10 @@ textarea:focus-visible {
 
 /* Judul kartu dibuat seragam untuk informasi profil dan keahlian. */
 .about-card h3,
-.skills-card h3 {
+.skills-card h3,
+.education-card h3,
+.resume-card h4,
+.skills-card h4 {
   margin: 0;
   font-size: 1.15rem;
   font-weight: 620;
@@ -703,6 +706,67 @@ textarea:focus-visible {
   padding: 1.35rem;
 }
 
+.education-card {
+  padding: 1.35rem;
+}
+
+.education-card h4 {
+  margin: 0.8rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.education-card p,
+.resume-role {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.resume-section {
+  margin-top: 2.5rem;
+}
+
+.resume-section-title {
+  margin: 0 0 1.1rem;
+  font-size: 1.35rem;
+  font-weight: 620;
+  letter-spacing: -0.04em;
+}
+
+.resume-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.resume-card {
+  padding: 1.35rem;
+}
+
+.resume-card ul,
+.project-highlights {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.9rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+
+.skills-card h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.9rem;
+}
+
+.skills-card h4 svg {
+  flex: 0 0 auto;
+  color: var(--violet);
+}
+
 /* Daftar keahlian berbentuk grid dua kolom. */
 .skills-grid {
   display: grid;
@@ -714,7 +778,7 @@ textarea:focus-visible {
 /* Baris skill dengan ikon dan nama teknologi. */
 .skill-item {
   display: flex;
-  min-height: 3rem;
+  min-height: 2.5rem;
   align-items: center;
   gap: 0.6rem;
   padding: 0.65rem;
@@ -900,6 +964,10 @@ textarea:focus-visible {
   color: var(--muted);
   font-size: 0.8rem;
   line-height: 1.7;
+}
+
+.project-highlights {
+  margin-top: 0.7rem;
 }
 
 .tech-list {
@@ -1100,6 +1168,14 @@ textarea:focus-visible {
   }
 
   .projects-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .resume-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skills-groups {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1162,7 +1238,8 @@ textarea:focus-visible {
   }
 
   .projects-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 52rem;
   }
 
   .project-preview {

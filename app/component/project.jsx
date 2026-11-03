@@ -43,8 +43,8 @@ export default function Project() {
           Beberapa hal yang <span className="gradient-text">saya bangun.</span>
         </h2>
         <p>
-          Eksplorasi singkat tentang produk dan pengalaman digital. Tautan di
-          bawah adalah data contoh yang bisa Anda ganti.
+          Proyek akademik pengembangan website toko online menggunakan HTML,
+          CSS, PHP, JavaScript, dan MySQL.
         </p>
       </motion.div>
 
@@ -66,10 +66,15 @@ export default function Project() {
               {/* Informasi ringkas proyek: kategori, nomor urut, judul, dan deskripsi. */}
               <div className="project-meta">
                 <span>{project.category}</span>
-                <span>{project.number} / 03</span>
+                <span>{project.number} / {String(projects.length).padStart(2, "0")}</span>
               </div>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
+              {project.highlights?.length > 0 && (
+                <ul className="project-highlights">
+                  {project.highlights.map((highlight) => <li key={highlight}>{highlight}</li>)}
+                </ul>
+              )}
               {/* Menampilkan teknologi yang dipakai sebagai label terpisah. */}
               <div aria-label="Teknologi yang digunakan" className="tech-list">
                 {project.stack.map((technology) => (
@@ -77,16 +82,22 @@ export default function Project() {
                 ))}
               </div>
               {/* Tautan menuju source code dan demo langsung proyek. */}
-              <div className="project-links">
-                <a href={project.githubUrl} rel="noreferrer" target="_blank">
-                  <GitBranch aria-hidden="true" size={15} /> GitHub
-                  <ArrowUpRight aria-hidden="true" size={13} />
-                </a>
-                <a href={project.demoUrl} rel="noreferrer" target="_blank">
-                  <ExternalLink aria-hidden="true" size={15} /> Live Demo
-                  <ArrowUpRight aria-hidden="true" size={13} />
-                </a>
-              </div>
+              {(project.githubUrl || project.demoUrl) && (
+                <div className="project-links">
+                  {project.githubUrl && (
+                    <a href={project.githubUrl} rel="noreferrer" target="_blank">
+                      <GitBranch aria-hidden="true" size={15} /> GitHub
+                      <ArrowUpRight aria-hidden="true" size={13} />
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a href={project.demoUrl} rel="noreferrer" target="_blank">
+                      <ExternalLink aria-hidden="true" size={15} /> Live Demo
+                      <ArrowUpRight aria-hidden="true" size={13} />
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           </motion.article>
         ))}
