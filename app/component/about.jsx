@@ -22,11 +22,12 @@ export default function About() {
       >
         <span className="eyebrow">01 / Tentang saya</span>
         <h2 id="about-title">
-          Senang membuat hal digital terasa <span className="gradient-text">lebih manusiawi.</span>
+          Informatika, jaringan, dan sistem untuk <span className="gradient-text">solusi digital.</span>
         </h2>
         <p>
-          Perpaduan rasa ingin tahu, desain yang matang, dan kode yang mudah
-          dirawat adalah cara saya mengubah ide menjadi pengalaman.
+          Lulusan S1 Teknik Informatika Universitas Nasional dengan IPK 3.74,
+          berpengalaman di bidang pengembangan perangkat lunak, jaringan, dan
+          administrasi sistem.
         </p>
       </motion.div>
 
@@ -39,12 +40,15 @@ export default function About() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.55 }}
         >
-          <h3>Sedikit tentang saya</h3>
+          <h3>Profil profesional</h3>
           <p>
-            Halo, saya {profile.name}, seorang {profile.title.toLowerCase()} yang
-            senang mengerjakan produk digital dari ide awal hingga detail
-            interaksi. Saya percaya website yang baik harus terasa cepat,
-            inklusif, dan menyenangkan digunakan.
+            Berpengalaman teknis dalam mengelola infrastruktur jaringan lokal
+            serta menangani troubleshooting hardware/software saat magang
+            sebagai Network Engineer di kantor kelurahan. Memiliki latar
+            belakang pelayanan pelanggan dan pengelolaan transaksi pembayaran
+            di PT Pos Indonesia dengan tingkat akurasi yang tinggi. Membangun
+            aplikasi web interaktif, berorientasi pada detail, dan siap
+            memberikan kontribusi profesional di industri IT.
           </p>
           <div className="about-facts">
             {/* Fakta profil dibuat terpisah agar mudah ditambah atau diubah. */}
@@ -53,8 +57,8 @@ export default function About() {
               <strong><MapPin aria-hidden="true" size={13} /> {profile.location}</strong>
             </div>
             <div className="about-fact">
-              <span>Fokus</span>
-              <strong><Sparkles aria-hidden="true" size={13} /> Web experience</strong>
+              <span>Pendidikan</span>
+              <strong><Sparkles aria-hidden="true" size={13} /> S1 Informatika · IPK 3.74</strong>
             </div>
           </div>
         </motion.article>
@@ -67,7 +71,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ delay: 0.1, duration: 0.55 }}
         >
-          <h3>Tools yang saya gunakan</h3>
+          <h3>Mata kuliah relevan</h3>
           <div className="skills-grid">
             {skills.map(({ name, icon: Icon }, index) => (
               <motion.div

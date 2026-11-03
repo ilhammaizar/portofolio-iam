@@ -18,12 +18,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "IAM — Portofolio",
   description:
-    "Portofolio pribadi Ilham Aulia Maizar — creative developer yang membangun pengalaman digital modern dan bermakna.",
+    "Portofolio Ilham Aulia Maizar, lulusan S1 Teknik Informatika Universitas Nasional dengan IPK 3.74 dan fokus pada pengembangan perangkat lunak, jaringan, serta administrasi sistem.",
   applicationName: "Portfolio Ilham Aulia Maizar",
   openGraph: {
-    title: "Ilham Aulia Maizar — Creative Developer",
+    title: "Ilham Aulia Maizar — Software Developer",
     description:
-      "Jelajahi proyek, keahlian, dan cerita di balik karya digital saya.",
+      "Lulusan Teknik Informatika dengan pengalaman pengembangan web, network engineering, administrasi sistem, dan pelayanan pelanggan.",
     type: "website",
     locale: "id_ID",
   },

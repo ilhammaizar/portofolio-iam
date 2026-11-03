@@ -1,26 +1,28 @@
 import {
-  Braces,
+  Blocks,
   BriefcaseBusiness,
   Camera,
   Code2,
+  Database,
   GitBranch,
-  Palette,
-  Wind,
+  MousePointer2,
+  Network,
+  ShieldCheck,
 } from "lucide-react";
 
 // Identitas utama situs yang dipakai ulang oleh hero, navigasi, kontak, dan footer.
 export const profile = {
   name: "Ilham Aulia Maizar",
   initials: "IAM",
-  title: "Creative Developer",
+  title: "Software Developer",
   email: "ilham.maizar2506@gmail.com",
   location: "Indonesia",
   availability: "Terbuka untuk peluang baru",
   cvUrl: "/CV-%20Ilham%20Aulia%20Maizar.pdf",
   profileImageUrl: "/Foto-Ilham.jpg",
   description:
-    "Saya merancang dan membangun pengalaman digital yang memadukan desain yang thoughtful dengan teknologi yang tepat.",
-  roles: ["Frontend Developer", "UI Engineer", "Creative Coder"],
+    "Lulusan S1 Teknik Informatika Universitas Nasional dengan IPK 3.74, berfokus pada pengembangan perangkat lunak, jaringan komputer, dan administrasi sistem.",
+  roles: ["Software Developer", "Network Engineer", "System Administrator"],
 };
 
 // Konten kartu proyek: nomor, kategori, deskripsi, teknologi, dan tautan.
@@ -58,14 +60,14 @@ export const projects = [
   },
 ];
 
-// Nama keahlian dan ikon yang ditampilkan pada kartu Tools di bagian Tentang.
+// Mata kuliah relevan dan ikon yang ditampilkan pada bagian Tentang.
 export const skills = [
-  { name: "React", icon: Code2 },
-  { name: "Next.js", icon: Braces },
-  { name: "Tailwind CSS", icon: Wind },
-  { name: "TypeScript", icon: Code2 },
-  { name: "Figma", icon: Palette },
-  { name: "UI Design", icon: Palette },
+  { name: "Pemrograman Web", icon: Code2 },
+  { name: "Rekayasa Perangkat Lunak", icon: Blocks },
+  { name: "Jaringan Komputer", icon: Network },
+  { name: "Basis Data", icon: Database },
+  { name: "Keamanan Sistem", icon: ShieldCheck },
+  { name: "Interaksi Manusia dan Komputer", icon: MousePointer2 },
 ];
 
 // Akun sosial dipakai pada ikon di hero dan daftar tautan di bagian Kontak.
